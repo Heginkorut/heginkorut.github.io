@@ -1,1 +1,0 @@
-# heginkorut.github.io
