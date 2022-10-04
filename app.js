@@ -1,5 +1,5 @@
 const container = document.querySelector(".container")
-const jewlery = [
+const coffees = [
   { name: "silver chain", image: "images/silverchain.jfif" },
   { name: "gold chain", image: "images/goldchain.jfif" },
   { name: "diamond chain", image: "images/diamondchain.jfif" },
@@ -10,14 +10,14 @@ const jewlery = [
   { name: "gold ring", image: "images/goldring.jfif" },
   { name: "diamond ring", image: "images/diamondring.jfif" },
 ]
-const showjewlery = () => {
+const showCoffees = () => {
   let output = ""
-  .forEach(
+  coffees.forEach(
     ({ name, image }) =>
       (output += `
               <div class="card">
                 <img class="card--avatar" src=${image} />
-                <h1 class="card--title">${jewlery}</h1>
+                <h1 class="card--title">${name}</h1>
                 <a class="card--link" href="#">admire</a>
               </div>
               `)
@@ -25,7 +25,7 @@ const showjewlery = () => {
   container.innerHTML = output
 }
 
-document.addEventListener("DOMContentLoaded", showjewlery)
+document.addEventListener("DOMContentLoaded", showCoffees)
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker

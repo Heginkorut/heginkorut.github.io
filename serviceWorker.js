@@ -16,7 +16,7 @@ const assets = [
 ]
 
 self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
+  installEvent.waitUntil()
     caches.open(staticDevCoffee).then(cache => {
       cache.addAll(assets)
     })
