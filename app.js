@@ -12,12 +12,12 @@ const jewlery = [
 ]
 const showjewlery = () => {
   let output = ""
-  coffees.forEach(
+  .forEach(
     ({ name, image }) =>
       (output += `
               <div class="card">
                 <img class="card--avatar" src=${image} />
-                <h1 class="card--title">${name}</h1>
+                <h1 class="card--title">${jewlery}</h1>
                 <a class="card--link" href="#">admire</a>
               </div>
               `)
